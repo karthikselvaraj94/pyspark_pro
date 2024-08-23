@@ -1,23 +1,24 @@
-pyspark_project/
-├── data/
-│   └── customer_transactions.csv
-├── output/
-├── pyspark_project.py
-├── README.md
-└── .gitignore
-__pycache__/
-*.pyc
-*.log
-output/
-# PySpark Project
+name: Run PySpark Script
 
-This is a PySpark project to analyze customer transactions.
+on: [push]
 
-## Setup
+jobs:
+  build:
+    runs-on: ubuntu-latest
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/yourusername/pyspark_project.git
-cd pyspark_project
-cd pyspark_project
-python pyspark_project.py
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.x'
+
+    - name: Install dependencies
+      run: |
+        pip install pyspark
+
+    - name: Run PySpark script
+      run: |
+        python pyspark_project.py
