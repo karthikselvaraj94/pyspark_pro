@@ -1,0 +1,23 @@
+pyspark_project/
+├── data/
+│   └── customer_transactions.csv
+├── output/
+├── pyspark_project.py
+├── README.md
+└── .gitignore
+__pycache__/
+*.pyc
+*.log
+output/
+# PySpark Project
+
+This is a PySpark project to analyze customer transactions.
+
+## Setup
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/pyspark_project.git
+cd pyspark_project
+cd pyspark_project
+python pyspark_project.py
